@@ -16,7 +16,7 @@ body{
     background: #1f1f1f;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 80px;
+    grid-template-columns: 50px, 400px;
 }
 
 #playLists{
@@ -39,8 +39,33 @@ body{
 
 /*Header*/
 
-#Home{
-    max-width: 80;
-    max-height: 80;
-    background: green;
+div#Home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 100%;
+    background: #FCB821;
+    align-self: center;
 }
+
+div#Home:hover{
+    transition: 0.4s ease;
+    transform: scale(1.1);
+    background: #FFC53D;
+}
+
+#homik{
+    width: 45px;
+    height: 45px;
+}
+
+/*#homik:hover{
+    margin: 1px 0px 0px 2px;
+    width: 45px;
+    height: 45px;
+    transition: 2s ease;
+    transform: rotate(360deg);
+}*/
