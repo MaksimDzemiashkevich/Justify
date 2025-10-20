@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <link rel="stylesheet" href="../CSS/index.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Музыкальный интерфейс</title>
+  <link rel="stylesheet" href="../CSS/index.css">
+
 </head>
 <body>
-    
+  <!-- Верхняя панель -->
+  <div class="header">
+    <div class="left-header">
+      <div class="logo">
+        <a href="#">
+          <img src="logo.png" alt="Лого">
+        </a>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Поиск...">
+        <img src="search.png" alt="Поиск">
+      </div>
+    </div>
+    <div class="auth-buttons">
+      <div class="register">Зарегаться</div>
+      <div class="login">Войти</div>
+    </div>
+  </div>
+
+  <!-- Контент -->
+  <div class="container">
+    <!-- Левая панель -->
+    <div class="sidebar">
+      <div class="library">
+        <h3>
+          Моя медиатека
+          <img src="plus.png" alt="Добавить">
+        </h3>
+        <p>Создайте свой плейлист</p>
+        <button class="playlist-button">Создать плейлист</button>
+        <p style="margin-top:20px;">Интересная информация..</p>
+        <p><a href="#">О нас</a></p>
+      </div>
+    </div>
+
+    <!-- Основная панель -->
+    <div class="main-content"></div>
+  </div>
 </body>
 </html>

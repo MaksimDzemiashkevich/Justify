@@ -1,3 +1,135 @@
-body{
-    background-color: red;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #2f2f2f;
+  color: white;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background: #2f2f2f;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #f4a774;
+  border-radius: 25px;
+  padding: 10px 20px;
+  width: 500px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 18px;
+  flex: 1;
+}
+
+.search-bar img {
+  width: 22px;
+  height: 22px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.register, .login {
+  border-radius: 25px;
+  padding: 14px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.register {
+  background: white;
+  color: black;
+}
+
+.login {
+  background: #f4a774;
+  color: black;
+}
+
+/* Основной контейнер */
+.container {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 70px);
+  padding: 20px 30px;
+  gap: 20px;
+}
+
+/* Левая панель */
+.sidebar {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.library {
+  background: #3a3a3a;
+  border-radius: 15px;
+  padding: 15px;
+  border: 1px solid #f4a774;
+  flex-grow: 1;
+}
+
+.library h3 {
+  margin-top: 0;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.library h3 img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.playlist-button {
+  background: #f4a774;
+  color: black;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+/* Основная область */
+.main-content {
+  flex-grow: 1;
+  background: #6f6969;
+  border-radius: 20px;
+  border: 1px solid #f4a774;
+}
+
+a {
+  color: white;
 }
