@@ -75,6 +75,7 @@ input#Search{
     background-color: #4f4f4f;
     border-radius: 25px; /* скругленные углы */
     border: none;
+    
     padding: 0 20px;
     font-size: 16px;
     color: #fff;
@@ -90,5 +91,5 @@ input#Search::placeholder {
 
 /* Эффект при фокусе */
 input#Search:focus {
-    border: 2px solid #fff;
+    outline: 2px solid #fff;
 }
