@@ -22,4 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
             loadPage(page);
         });
     });
+
+    // Кнопка "Домой"
+    const homeBtn = document.getElementById("homik");
+    if (homeBtn) {
+        homeBtn.addEventListener("click", () => {
+            loadPage("home"); // подгружает home.html в #content
+        });
+    }
 });
