@@ -15,10 +15,10 @@ body{
     grid-column: 1/3;
     background: #1f1f1f;
     display: grid;
-    grid-template-columns: 50px 400px; /* изменено */
+    grid-template-columns: 50px auto auto; /* изменено */
     align-items: center; /* добавлено */
     padding: 0 20px; /* добавлено */
-    gap: 20px; /* добавлено */
+    gap: 50px; /* добавлено */
 }
 
 #playLists{
@@ -41,65 +41,4 @@ body{
 
 /*Header*/
 
-div#Home{
-    display: flex;
-    justify-content: center;
-    
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    background: #FCB821;
-}
 
-div#Home:hover{
-    transition: 0.4s ease;
-    transform: scale(1.1);
-    background: #FFC53D;
-}
-
-#homik{
-    width: 45px;
-    height: 45px;
-}
-
-/* Стили для поиска */
-div#Search{
-    display: flex;
-    align-items: center;
-}
-
-#Search #icon {
-    position: relative;
-    left: 40px;
-    width: 30px; 
-    height: 30px;
-    pointer-events: none; /* чтобы не мешала клику в input */
-    filter: brightness(3);
-}
-
-input#Search{
-    width: 100%;
-    max-width: 400px; /* ограничиваем максимальную ширину */
-    height: 40px;
-    background-color: #4f4f4f;
-    border-radius: 25px; /* скругленные углы */
-    border: none;
-    padding: 0 50px;
-    font-size: 16px;
-    color: #fff;
-    outline: none;
-    box-sizing: border-box;
-    padding-top: 4px;
-}
-
-/* Дополнительные стили для placeholder */
-input#Search::placeholder {
-    color:#948F8F;
-    font-size: 16px;
-    padding-bottom: 0px 100px;
-}
-
-/* Эффект при фокусе */
-input#Search:focus {
-    outline: 2px solid #fff;
-}

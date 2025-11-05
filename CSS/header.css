@@ -1,0 +1,103 @@
+div#Home{
+    display: flex;
+    justify-content: center;
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: #FCB821;
+}
+
+div#Home:hover{
+    transition: 0.4s ease;
+    transform: scale(1.1);
+    background: #FFC53D;
+}
+
+#homik{
+    width: 45px;
+    height: 45px;
+}
+
+/* Стили для поиска */
+div#Search{
+    display: flex;
+    align-items: center;
+}
+
+#Search #icon {
+    position: relative;
+    left: 40px;
+    width: 30px; 
+    height: 30px;
+    pointer-events: none; /* чтобы не мешала клику в input */
+    filter: brightness(3);
+}
+
+input#Search{
+    width: 100%;
+    max-width: 400px; /* ограничиваем максимальную ширину */
+    height: 40px;
+    background-color: #4f4f4f;
+    border-radius: 25px; /* скругленные углы */
+    border: none;
+    padding: 0 50px;
+    font-size: 16px;
+    color: #fff;
+    outline: none;
+    box-sizing: border-box;
+    padding-top: 4px;
+}
+
+/* Дополнительные стили для placeholder */
+input#Search::placeholder {
+    color:#948F8F;
+    font-size: 16px;
+    padding-bottom: 0px 100px;
+}
+
+/* Эффект при фокусе */
+input#Search:focus {
+    outline: 2px solid #fff;
+}
+
+/* Блок кнопок */
+#authButtons {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+/* Красивые кнопки */
+.auth-btn {
+    padding: 10px 20px;
+    background: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s ease-in-out;
+}
+button#loginBtn{
+    background-color: #FCB821;
+}
+button#registerBtn{
+  
+}
+/* Hover */
+.auth-btn:hover {
+    background: #3a3a3a;
+    transform: scale(1.05);
+}
+
+/* Аккаунт (можно сделать акцент) */
+#accountBtn {
+    background: #FCB821;
+    border: none;
+    color: black;
+}
+
+#accountBtn:hover {
+    background: #FFC53D;
+}

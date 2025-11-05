@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -18,6 +21,14 @@
                     <input id="Search"  placeholder="Что хотите послушать?">
 
             </div>
+            <div id="authButtons">
+                <button class="auth-btn" id="loginBtn">Войти</button>
+                <button class="auth-btn" id="registerBtn">Зарегистрироваться</button>
+
+                <!-- Эта кнопка показывается только если пользователь авторизован -->
+                <button class="auth-btn" id="accountBtn" style="display: none;">Аккаунт</button>
+            </div>
+
         </header>
         <aside id="playLists">
 
@@ -26,8 +37,36 @@
             
         </div>
         <footer id="player">
+                            <div id="player-left">
+                <img src="../Image/defaultCover.png" id="track-cover">
+                <div id="track-info">
+                    <span id="track-name">Название трека</span>
+                    <span id="track-artist">Исполнитель</span>
+                </div>
+            </div>
+
+            <div id="player-center">
+                <div id="controls">
+                    <button class="player-btn" id="prevBtn">⏮</button>
+                    <button class="player-btn play" id="playBtn">▶</button>
+                    <button class="player-btn" id="nextBtn">⏭</button>
+                </div>
+
+                <div id="progress-block">
+                    <span id="current-time">0:00</span>
+                    <input type="range" id="progress" min="0" max="100" value="0">
+                    <span id="total-time">3:45</span>
+                </div>
+            </div>
+
+            <div id="player-right">
+                <img src="../Image/lowVolume.png" id="volume-icon">
+                <input type="range" id="volume" min="0" max="100" value="70">
+            </div>
 
         </footer>
     </div>
+    <script src="/JAVASCRIPT/index.js"></script>
+    <script src="/JAVASCRIPT/volume.js"></script>
 </body>
 </html>
