@@ -1,3 +1,15 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const registerBtn = document.getElementById("registerBtn");
+
+    if (registerBtn) {
+        registerBtn.addEventListener("click", function () {
+            window.location.href = "registrate.html";
+        });
+    }
+});
+document.getElementById('loginBtn').addEventListener('click', function() {
+    window.location.href = 'enter.html'; 
+});
 function updateRangeBackground(rangeElem, colorFilled = '#FCB821', colorRemaining = '#ffffff') {
     const min = parseFloat(rangeElem.min) || 0;
     const max = parseFloat(rangeElem.max) || 100;
