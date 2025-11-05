@@ -1,10 +1,18 @@
 const buttonPlay = document.getElementById("playBtn");
 
-
 if (buttonPlay) {
-    buttonPlay.addEventListener('input', () => (buttonPlay));
+    buttonPlay.addEventListener('click', () => {
+        changeIconPlay(buttonPlay);
+    });
 }
 
-function ChangeIconButtonPlay(buttonPlay){
-    
+function changeIconPlay(button) {
+    // Если сейчас "▶", меняем на "⏸"
+    if (button.textContent === "▶") {
+        button.textContent = "⏸";
+    } 
+    // Если сейчас "⏸", меняем на "▶"
+    else {
+        button.textContent = "▶";
+    }
 }
