@@ -1,4 +1,3 @@
-/* === Левый сайдбар === */
 #playLists {
     width: 260px;
     background: #111;
@@ -8,7 +7,6 @@
     overflow-y: auto;
 }
 
-/* Заголовок */
 #playlist-header {
     font-size: 18px;
     font-weight: bold;
@@ -16,14 +14,12 @@
     color: #fff;
 }
 
-/* Список */
 #playlist-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-/* Один элемент */
 .playlist-item {
     display: flex;
     gap: 12px;
@@ -38,14 +34,12 @@
     background: #1a1a1a;
 }
 
-/* Картинка */
 .playlist-cover {
     width: 55px;
     height: 55px;
     border-radius: 6px;
 }
 
-/* Текст */
 .playlist-info {
     display: flex;
     flex-direction: column;
@@ -61,7 +55,6 @@
     color: #bbbbbb;
 }
 
-/* === Скроллбар для левого сайдбара === */
 #playLists::-webkit-scrollbar {
     width: 10px;
     background: transparent;
@@ -72,7 +65,7 @@
 }
 
 #playLists::-webkit-scrollbar-thumb {
-    background: #ff8c00; /* оранжевый */
+    background: #ff8c00;
     border-radius: 10px;
 }
 
