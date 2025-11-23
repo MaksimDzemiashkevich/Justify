@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById('loginBtn').addEventListener('click', function() {
     window.location.href = 'enter.html'; 
 });
+
 function updateRangeBackground(rangeElem, colorFilled = '#FCB821', colorRemaining = '#ffffff') {
     const min = parseFloat(rangeElem.min) || 0;
     const max = parseFloat(rangeElem.max) || 100;

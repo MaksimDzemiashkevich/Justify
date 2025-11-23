@@ -1,68 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../CSS/header.css">
-    <link rel="stylesheet" href="../CSS/index.css">
-    <link rel="stylesheet" href="../CSS/footer.css">
-    <link rel="stylesheet" href="../CSS/sidebar.css">
-    <link rel="stylesheet" href="../CSS/content.css">
-
-    <link rel="stylesheet" href="../CSS/contentPleyList.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
     <title>Document</title>
 </head>
 <body>
-    <div id="main">
-        <header id="header">
-            <div id="Home">
-                <img src="../Image/homik.png" id="homik">
-            </div>
-
-            <div id="Search">
-                <img id="icon" src="../Image/Lupa.png">
-                <input id="Search"  placeholder="Что хотите послушать?">
-            </div>
-
-            <div id="authButtons">
-                <button class="auth-btn" id="loginBtn">Войти</button>
-                <button class="auth-btn" id="registerBtn">Зарегистрироваться</button>
-
-             
-                <button class="auth-btn" id="accountBtn" style="display: none;">Аккаунт</button>
-            </div>
-
-        </header>
-        <aside id="playLists">
-            <div id="playlist-header">Мои плейлисты</div>
-
-            <div id="playlist-list">
-
-                <div class="playlist-item" data-page="MyPleyList.html">
-                    <img src="../Image/defaultCover.png" class="playlist-cover">
-                    <div class="playlist-info">
-                        <div class="playlist-name">Название плейлиста</div>
-                        <div class="playlist-author">Автор</div>
-                    </div>
-                </div>
-
-                <div class="playlist-item">
-                    <img src="../Image/defaultCover.png" class="playlist-cover">
-                    <div class="playlist-info">
-                        <div class="playlist-name">Рабочий плейлист</div>
-                        <div class="playlist-author">Максим</div>
-                    </div>
-                </div>
-
-            </div>
-
-        </aside>
-        <div id="content">
-
-       
-            
-           <div id="playlistHeader">
+    <div id="playlistHeader">
                 <img src="cover.jpg" alt="Rain Sounds Cover" class="cover">
                 <div class="info">
                     <h1>Name of Playlist</h1>
@@ -158,44 +102,6 @@
                         <div class="track-duration">2:55</div>
                     </div>
             </div>
-        </div>
-
-
-    
-
-        <footer id="player">
-            <div id="player-left">
-                <img src="../Image/defaultCover.png" id="track-cover">
-                <div id="track-info">
-                    <span id="track-name">Название трека</span>
-                    <span id="track-artist">Исполнитель</span>
-                </div>
-            </div>
-
-            <div id="player-center">
-                <div id="controls">
-                    <button class="player-btn" id="prevBtn">⏮</button>
-                    <button class="player-btn play" id="playBtn">▶</button>
-                    <button class="player-btn" id="nextBtn">⏭</button>
-                </div>
-
-                <div id="progress-block">
-                    <span id="current-time">0:00</span>
-                    <input type="range" id="progress" min="0" max="100" value="0">
-                    <span id="total-time">3:45</span>
-                </div>
-            </div>
-
-            <div id="player-right">
-                <img src="../Image/lowVolume.png" id="volume-icon">
-                <input type="range" id="volume" min="0" max="100" value="70">
-            </div>
-
-        </footer>
-    </div>
-    <script src="/JAVASCRIPT/index.js"></script>
-    <script src="/JAVASCRIPT/volume.js"></script>
-    <script src="/JAVASCRIPT/playTrack.js"></script>
-    <script src="/JAVASCRIPT/content.js"></script>
+            
 </body>
 </html>
