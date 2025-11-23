@@ -3,7 +3,6 @@ const volumeIcon = document.getElementById('volume-icon');
 if (volume) {
     updateIconVolume(volume);
 
-    // обновляем иконку при движении ползунка
     volume.addEventListener('input', () => updateIconVolume(volume));
 }
 
