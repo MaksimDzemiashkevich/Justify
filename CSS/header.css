@@ -19,12 +19,12 @@ div#Home:hover{
     height: 45px;
 }
 
-div#Search{
+div#Searchbar{
     display: flex;
     align-items: center;
 }
 
-#Search #icon {
+#Searchbar #icon {
     position: relative;
     left: 40px;
     width: 30px; 
