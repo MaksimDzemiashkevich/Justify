@@ -3,13 +3,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (registerBtn) {
         registerBtn.addEventListener("click", function () {
-            window.location.href = "registrate.html";
+            window.location.href = "HTML/registrate.html";
         });
     }
+    document.getElementById('loginBtn').addEventListener('click', function() {
+        window.location.href = "HTML/enter.html"; 
+    });
+
+    const progress = document.getElementById('progress');
+    const volume = document.getElementById('volume');
+
+    if (progress) {
+        progress.classList.add('range-gradient');
+        updateRangeBackground(progress);
+        progress.addEventListener('input', () => updateRangeBackground(progress));
+    }
+
+    if (volume) {
+        volume.classList.add('range-gradient');
+        updateRangeBackground(volume);
+        volume.addEventListener('input', () => updateRangeBackground(volume));
+    }
+    
 });
-document.getElementById('loginBtn').addEventListener('click', function() {
-    window.location.href = 'enter.html'; 
-});
+
 
 function updateRangeBackground(rangeElem, colorFilled = '#FCB821', colorRemaining = '#ffffff') {
     const min = parseFloat(rangeElem.min) || 0;
@@ -22,17 +39,3 @@ function updateRangeBackground(rangeElem, colorFilled = '#FCB821', colorRemainin
         `linear-gradient(90deg, ${colorFilled} 0%, ${colorFilled} ${percent}%, ${colorRemaining} ${percent}%, ${colorRemaining} 100%)`;
 }
 
-const progress = document.getElementById('progress');
-const volume = document.getElementById('volume');
-
-if (progress) {
-    progress.classList.add('range-gradient');
-    updateRangeBackground(progress);
-    progress.addEventListener('input', () => updateRangeBackground(progress));
-}
-
-if (volume) {
-    volume.classList.add('range-gradient');
-    updateRangeBackground(volume);
-    volume.addEventListener('input', () => updateRangeBackground(volume));
-}
