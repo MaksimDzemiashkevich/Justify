@@ -1,3 +1,3 @@
 document.getElementById('register-link').addEventListener('click', function() {
-    window.location.href = 'Registrate.html'; 
+    window.location.href = '/HTML/Registrate.html'; 
 });

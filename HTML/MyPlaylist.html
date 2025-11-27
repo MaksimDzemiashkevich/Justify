@@ -17,13 +17,13 @@
     <header id="header">
         <div id="Home">
             <a href="/index.html">
-                <img src="../Image/homik.png" id="homik">
+                <img src="/Image/homik.png" id="homik">
             </a>
 
         </div>
 
         <div id="Searchbar">
-            <img id="icon" src="../Image/Lupa.png">
+            <img id="icon" src="/Image/Lupa.png">
             <input id="Search" placeholder="Что хотите послушать?">
         </div>
 
@@ -39,9 +39,9 @@
         <div id="playlist-header">Мои плейлисты</div>
 
         <div id="playlist-list">
-            <a href="HTML/MyPlaylist.html">
+            <a href="/HTML/MyPlaylist.html">
                 <div class="playlist-item">
-                    <img src="../Image/defaultCover.png" class="playlist-cover">
+                    <img src="/Image/defaultCover.png" class="playlist-cover">
                     <div class="playlist-info">
                         <div class="playlist-name">Название плейлиста</div>
                         <div class="playlist-author">Автор</div>
@@ -52,7 +52,7 @@
     </aside>
     <div id="content">
         <div id="playlistHeader">
-            <img src="../Image/defaultCover.png" alt="Rain Sounds Cover" class="cover">
+            <img src="/Image/defaultCover.png" alt="Rain Sounds Cover" class="cover">
             <div class="info">
                 <h1>Name of Playlist</h1>
                 <p>250 треков · 11 часов · </p>
@@ -60,13 +60,13 @@
         </div>
         
         <div id="trackList">
-            <div class="track">
+            <div class="track" data-src="/Music/rain.mp3">
                 <div class="track-number">1</div>
                 <div class="track-title">Whispers of Rain</div>
                 <div class="track-artist">Echo Nature</div>
                 <div class="track-duration">3:12</div>
             </div>
-            <div class="track">
+            <div class="track" data-src="/Music/Rendezvous.mp3">
                 <div class="track-number">2</div>
                 <div class="track-title">Forest Drizzle</div>
                 <div class="track-artist">Calm Elements</div>
@@ -178,6 +178,11 @@
 
     </footer>
 </div>
+<audio id="audioPlayer"></audio>
+<script src="/JAVASCRIPT/index.js"></script>
+<script src="/JAVASCRIPT/volume.js"></script>
+<script src="/JAVASCRIPT/playTrack.js"></script>
+<script src="/JAVASCRIPT/router.js"></script>
 
 </body>
 </html>

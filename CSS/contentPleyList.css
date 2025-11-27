@@ -38,7 +38,7 @@
     font-family: Arial, sans-serif;
     color: white;
     max-height: 600px;
-    overflow-y: auto;
+    /*overflow-y: auto;*/
     scrollbar-width: thin;
     scrollbar-color: orange #202020;
 }

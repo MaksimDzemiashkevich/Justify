@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (registerBtn) {
         registerBtn.addEventListener("click", function () {
-            window.location.href = "HTML/registrate.html";
+            window.location.href = "/HTML/registrate.html";
         });
     }
     document.getElementById('loginBtn').addEventListener('click', function() {
-        window.location.href = "HTML/enter.html"; 
+        window.location.href = "/HTML/enter.html"; 
     });
 
     const progress = document.getElementById('progress');
