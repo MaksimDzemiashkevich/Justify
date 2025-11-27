@@ -3,6 +3,7 @@
     align-items: center;
     gap: 30px;
     padding: 30px;
+    min-width: 450;
     background: linear-gradient(to top,#1f1f1f 0%,#3a2f1f 25%,#7a4f1f 50%,#c97f1f 75%,#FCB821 100%);
 
     color: white;
