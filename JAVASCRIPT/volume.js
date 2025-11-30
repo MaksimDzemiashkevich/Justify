@@ -8,7 +8,7 @@ if (volume) {
 }
 
 volume.addEventListener('input', () => {
-    audio.volume = volume.value / 100;  // ← ГЛАВНОЕ!
+    audio.volume = volume.value / 100;
     updateIconVolume(volume);
 });
 

@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Регистрация Spotify</title>
-  <link rel="stylesheet" href="/CSS/Registor.css" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Регистрация Spotify</title>
+	<link rel="stylesheet" href="/CSS/Registor.css" />
 </head>
 <body>
   
-  <div class="container">
-    <h1>Зарегистрируйтесь и погрузитесь в музыку</h1>
-    
-    <input type="email" placeholder="Электронная почта" class="input email" />
-    <input type="text" placeholder="Название профиля" class="input username" />
-    <input type="password" placeholder="Пароль" class="input password" />
-    <input type="password" placeholder="Повторите пароль" class="input confirm-password" />
+	<div class="container">
+		<h1>Зарегистрируйтесь и погрузитесь в музыку</h1>
+		<form action="/PHP/Registrate.php" method="POST">
+			<input name="email" type="email" placeholder="Электронная почта" class="input email" required/>
+			<input name="username" type="text" placeholder="Название профиля" class="input username" required/>
+			<input name="password" type="password" placeholder="Пароль" class="input password" required/>
+			<input name="password_confirm" type="password" placeholder="Повторите пароль" class="input confirm-password" required/>
 
-    <button class="next-btn">Далее</button>
+			<button type="submit" class="next-btn">Далее</button>
+		</form>
 
-    <div class="divider"></div>
 
-    <p id = "login-link" class="login-link">Уже есть аккаунт? <a href="#">Войти</a></p>
-  </div>
-  <script src="/JAVASCRIPT/Registor.js"></script>
+		<div class="divider"></div>
+
+		<p id = "login-link" class="login-link">Уже есть аккаунт? <a href="/HTML/enter.html">Войти</a></p>
+	</div>
+	<script src="/JAVASCRIPT/Registor.js"></script>
 </body>
 </html>

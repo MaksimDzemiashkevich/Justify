@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Вход в Spotify</title>
-  <link rel="stylesheet" href="/CSS/enter.css" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Вход в Spotify</title>
+	<link rel="stylesheet" href="/CSS/enter.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Войдите в свой аккаунт</h1>
-
-    <input type="email" placeholder="Электронная почта" class="input email" />
-    
-    <button class="next-btn">Продолжить</button>
-
-    <div class="divider"></div>
-
-    <p id = "register-link" class="register-link">Нет аккаунта? <a href="#">Зарегистрироваться</a></p>
-  </div>
-  <script src="/JAVASCRIPT/enter.js"></script>
+	<div class="container">
+	<h1>Войдите в свой аккаунт</h1>
+		<form action="/PHP/Registrate.php" method="POST">
+			<input name="email" type="email" placeholder="Электронная почта" class="input email" required/>
+			<button type="submit" class="next-btn">Продолжить</button>
+		</form>
+		<div class="divider"></div>
+		<p id = "register-link" class="register-link">Нет аккаунта? <a href="/HTML/Registrate.html">Зарегистрироваться</a></p>
+	</div>
+	<script src="/JAVASCRIPT/enter.js"></script>
 </body>
 </html>

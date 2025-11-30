@@ -1,3 +1,6 @@
+<?php
+    //require "../PHP/checkSession.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +19,7 @@
 <div id="main">
     <header id="header">
         <div id="Home">
-            <a href="/index.html">
+            <a href="/index.php">
                 <img src="/Image/homik.png" id="homik">
             </a>
 
@@ -39,7 +42,7 @@
         <div id="playlist-header">Мои плейлисты</div>
 
         <div id="playlist-list">
-            <a href="/HTML/MyPlaylist.html">
+            <a href="/HTML/MyPlaylist.php">
                 <div class="playlist-item">
                     <img src="/Image/defaultCover.png" class="playlist-cover">
                     <div class="playlist-info">

@@ -1,3 +1,6 @@
+<?php
+//require "PHP/checkSession.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +20,7 @@
     <div id="main">
         <header id="header">
             <div id="Home">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="Image/homik.png" id="homik">
                 </a>
                 
@@ -40,12 +43,33 @@
             <div id="playlist-header">Мои плейлисты</div>
 
             <div id="playlist-list">
-                <a href="HTML/MyPlaylist.html">
+                <?php
+                $playlists = $user["playlists"] ?? [];;
+                foreach($playlists as $playlist): ?>
+                    <a href="HTML/MyPlaylist.php?id=<?= $playlist["_id"] ?>">
+                        <div class="playlist-item">
+                            <img src="<?= $playlist["cover"] ?? "/Image/defaultCover.png" ?>" class="playlist-cover">
+                            <div class="playlist-info">
+                                <div class="playlist-name"><?= htmlspecialchars($playlist["name"]) ?></div>
+                                <div class="playlist-author"><?= htmlspecialchars($user["username"]) ?></div>
+                            </div>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
+                <a href="HTML/MyPlaylist.php">
                     <div class="playlist-item">
                         <img src="Image/defaultCover.png" class="playlist-cover">
                         <div class="playlist-info">
                             <div class="playlist-name">Название плейлиста</div>
                             <div class="playlist-author">Автор</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" id="new-playlist-btn">
+                    <div class="playlist-item">
+                        <img src="Image/NewPlaylists.png" class="playlist-cover">
+                        <div class="playlist-info">
+                            <div class="playlist-name">Новый плейлист</div>
                         </div>
                     </div>
                 </a>
@@ -89,20 +113,22 @@
                 </div>
 
                 <div class="playlist-row-wrapper">
-                    <div class="playlist-row" id="">
-                        <div class="card">
-                        <img src="/Image/horse.png" class="card-cover">
-                        <div class="card-name">Relax</div>
-                        <div class="card-author">Spotify</div>
+                    <div class="playlist-row">
+                        <?php
+                        $recent = $user["recently_played"] ?? [];
+                        foreach($recent as $playlist):
+                        ?>
+                            <div class="card">
+                                <img src="<?= $playlist["cover"] ?>" class="card-cover">
+                                <div class="card-name"><?= htmlspecialchars($playlist["name"]) ?></div>
+                                <div class="card-author"><?= htmlspecialchars($playlist["artist"]) ?></div>
+                            </div>
+                        <?php endforeach; ?>
                         </div>
-                    </div>
+
                 </div>
             </div>
-
         </div>
-
-
-    
 
         <footer id="player">
             <div id="player-left">
@@ -134,10 +160,22 @@
 
         </footer>
     </div>
+    <div id="new-playlist-modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Создать новый плейлист</h2>
+            <form action="/PHP/createPlaylist.php" method="POST">
+                <input type="text" id="playlist-name" placeholder="Название плейлиста">
+                <input type="text" id="playlist-cover" placeholder="Ссылка на обложку (необязательно)">
+                <button type="submit">Сохранить</button>
+                <button type="button" id="close-modal">Отмена</button>
+            </form>
+        </div>
+    </div>
     <script src="/JAVASCRIPT/index.js"></script>
     <script src="/JAVASCRIPT/volume.js"></script>
     <script src="/JAVASCRIPT/playTrack.js"></script>
     <script src="/JAVASCRIPT/content.js"></script>
     <script src="/JAVASCRIPT/router.js"></script>
+    <script src="/JAVASCRIPT/NewPlaylist.js"></script>
 </body>
 </html>
