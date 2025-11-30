@@ -42,12 +42,33 @@
         <div id="playlist-header">Мои плейлисты</div>
 
         <div id="playlist-list">
+            <?php
+                $playlists = $user["playlists"] ?? [];;
+                foreach($playlists as $playlist): ?>
+                    <a href="/HTML/MyPlaylist.php?id=<?= $playlist["_id"] ?>">
+                        <div class="playlist-item">
+                            <img src="<?= $playlist["cover"] ?? "/Image/defaultCover.png" ?>" class="playlist-cover">
+                            <div class="playlist-info">
+                                <div class="playlist-name"><?= htmlspecialchars($playlist["name"]) ?></div>
+                                <div class="playlist-author"><?= htmlspecialchars($user["username"]) ?></div>
+                            </div>
+                        </div>
+                    </a>
+            <?php endforeach; ?>
             <a href="/HTML/MyPlaylist.php">
                 <div class="playlist-item">
                     <img src="/Image/defaultCover.png" class="playlist-cover">
                     <div class="playlist-info">
                         <div class="playlist-name">Название плейлиста</div>
                         <div class="playlist-author">Автор</div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" id="new-playlist-btn">
+                <div class="playlist-item">
+                    <img src="/Image/NewPlaylists.png" class="playlist-cover">
+                    <div class="playlist-info">
+                        <div class="playlist-name">Новый плейлист</div>
                     </div>
                 </div>
             </a>
@@ -186,6 +207,7 @@
 <script src="/JAVASCRIPT/volume.js"></script>
 <script src="/JAVASCRIPT/playTrack.js"></script>
 <script src="/JAVASCRIPT/router.js"></script>
+<script src="/JAVASCRIPT/NewPlaylist.js"></script>
 
 </body>
 </html>
