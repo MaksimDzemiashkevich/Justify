@@ -67,7 +67,9 @@
             </a>
             <a href="#" id="new-playlist-btn">
                 <div class="playlist-item">
-                    <img src="/Image/NewPlaylists.png" class="playlist-cover">
+                    <div class="playlist-cover_icon">
+                        <img src="/Image/NewPlaylists.png">
+                    </div>
                     <div class="playlist-info">
                         <div class="playlist-name">Новый плейлист</div>
                     </div>
@@ -204,11 +206,20 @@
     </footer>
 </div>
 <audio id="audioPlayer"></audio>
-<script src="/JAVASCRIPT/index.js"></script>
-<script src="/JAVASCRIPT/volume.js"></script>
-<script src="/JAVASCRIPT/playTrack.js"></script>
-<script src="/JAVASCRIPT/router.js"></script>
-<script src="/JAVASCRIPT/NewPlaylist.js"></script>
+
+
+<!-- Модальное окно создания плейлиста -->
+<div id="new-playlist-modal">
+    <div class="modal-content">
+        <h2>Создать новый плейлист</h2>
+        <form id="create-playlist-form" action="/PHP/createPlaylist.php" method="POST">
+            <input type="text" name="playlist_name" id="playlist-name" placeholder="Название плейлиста" required>
+            <input type="url" name="playlist_cover" id="playlist-cover" placeholder="Ссылка на обложку (необязательно)">
+            <button type="submit">Создать</button>
+            <button type="button" id="close-modal">Отмена</button>
+        </form>
+    </div>
+</div>
 
 <!-- Модальное окно редактирования плейлиста -->
 <div id="edit-playlist-modal" class="modal">
@@ -238,6 +249,12 @@
         </form>
     </div>
 </div>
+
+<script src="/JAVASCRIPT/index.js"></script>
+<script src="/JAVASCRIPT/volume.js"></script>
+<script src="/JAVASCRIPT/playTrack.js"></script>
+<script src="/JAVASCRIPT/router.js"></script>
 <script src="/JAVASCRIPT/editPlaylist.js"></script>
+<script src="/JAVASCRIPT/NewPlaylist.js"></script>
 </body>
 </html>
