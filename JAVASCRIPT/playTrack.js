@@ -4,6 +4,7 @@ const trackArtist = document.getElementById("track-artist");
 const progress = document.getElementById("progress");
 const currentTimeElem = document.getElementById("current-time");
 const totalTimeElem = document.getElementById("total-time");
+let isSeeking = false;
 
 document.querySelectorAll(".track").forEach(track => {
     track.addEventListener("dblclick", () => {
@@ -40,13 +41,19 @@ playBtn.addEventListener("click", () => {
 });
 
 audio.addEventListener("timeupdate", () => {
-    progress.value = (audio.currentTime / audio.duration) * 100;
-    updateRangeBackground(progress);
-    currentTimeElem.innerText = formatTime(audio.currentTime);
+    if (!isSeeking) {
+        progress.value = (audio.currentTime / audio.duration) * 100;
+        updateRangeBackground(progress);
+        currentTimeElem.innerText = formatTime(audio.currentTime);
+    }
 });
 
 progress.addEventListener("input", () => {
-    audio.currentTime = (progress.value / 100) * audio.duration;
+    if (isSeeking) {
+        currentTimeElem.innerText = formatTime(
+            (progress.value / 100) * audio.duration
+        );
+    }
 });
 
 function formatTime(time) {
@@ -54,3 +61,12 @@ function formatTime(time) {
     const secs = Math.floor(time % 60);
     return `${mins}:${secs < 10 ? "0" : ""}${secs}`;
 }
+
+progress.addEventListener("mousedown", () => {
+    isSeeking = true;
+});
+
+progress.addEventListener("mouseup", () => {
+    isSeeking = false;
+    audio.currentTime = (progress.value / 100) * audio.duration;
+});

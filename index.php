@@ -46,7 +46,7 @@
                 <?php
                 $playlists = $user["playlists"] ?? [];;
                 foreach($playlists as $playlist): ?>
-                    <a href="HTML/MyPlaylist.php?id=<?= $playlist["_id"] ?>">
+                    <a href="/HTML/MyPlaylist.php?id=<?= $playlist["_id"] ?>">
                         <div class="playlist-item">
                             <img src="<?= $playlist["cover"] ?? "/Image/defaultCover.png" ?>" class="playlist-cover">
                             <div class="playlist-info">
@@ -56,9 +56,9 @@
                         </div>
                     </a>
                 <?php endforeach; ?>
-                <a href="HTML/MyPlaylist.php">
+                <a href="/HTML/MyPlaylist.php">
                     <div class="playlist-item">
-                        <img src="Image/defaultCover.png" class="playlist-cover">
+                        <img src="/Image/defaultCover.png" class="playlist-cover">
                         <div class="playlist-info">
                             <div class="playlist-name">Название плейлиста</div>
                             <div class="playlist-author">Автор</div>
@@ -89,7 +89,7 @@
                 <div class="playlist-row-wrapper">
 
                     <button class="arrow left" id="top-week-prev">
-                        <img src="../Image/arrow-left.png" alt="">
+                        <img src="/Image/arrow-left.png" alt="">
                     </button>
                     <div class="playlist-row" id="top-week-row">
                         
@@ -104,14 +104,13 @@
                         
 
                     </div>
-                    <button class="arrow right"> <img src="../Image/arrow-right.png" alt="" id="top-week-next"></button>
+                    <button class="arrow right"> <img src="/Image/arrow-right.png" alt="" id="top-week-next"></button>
                 </div>
             </div>
 
             <div class="section">
                 <div class="section-header">
                     <h2>Недавно прослушано</h2>
-                    
                 </div>
 
                 <div class="playlist-row-wrapper">
@@ -126,7 +125,7 @@
                                 <div class="card-author"><?= htmlspecialchars($playlist["artist"]) ?></div>
                             </div>
                         <?php endforeach; ?>
-                        </div>
+                    </div>
 
                 </div>
             </div>
