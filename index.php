@@ -66,13 +66,15 @@
                     </div>
                 </a>
                 <a href="#" id="new-playlist-btn">
-                    <div class="playlist-item">
-                        <img src="Image/NewPlaylists.png" class="playlist-cover">
-                        <div class="playlist-info">
-                            <div class="playlist-name">Новый плейлист</div>
+                        <div class="playlist-item">
+                            <div class="playlist-cover_icon">
+                                <img src="Image/NewPlaylists.png">
+                            </div>
+                            <div class="playlist-info">
+                                <div class="playlist-name">Новый плейлист</div>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
             </div>
 
         </aside>
@@ -160,16 +162,16 @@
 
         </footer>
     </div>
-    <div id="new-playlist-modal" style="display: none;">
-        <div class="modal-content">
-            <h2>Создать новый плейлист</h2>
-            <form action="/PHP/createPlaylist.php" method="POST">
-                <input type="text" id="playlist-name" placeholder="Название плейлиста">
-                <input type="text" id="playlist-cover" placeholder="Ссылка на обложку (необязательно)">
-                <button type="submit">Сохранить</button>
-                <button type="button" id="close-modal">Отмена</button>
-            </form>
-        </div>
+        <div id="new-playlist-modal">
+            <div class="modal-content">
+                <h2>Создать новый плейлист</h2>
+                <form id="create-playlist-form" action="/PHP/createPlaylist.php" method="POST">
+                    <input type="text" name="playlist_name" id="playlist-name" placeholder="Название плейлиста" required>
+                    <input type="url" name="playlist_cover" id="playlist-cover" placeholder="Ссылка на обложку (необязательно)">
+                    <button type="submit">Создать</button>
+                    <button type="button" id="close-modal">Отмена</button>
+                </form>
+            </div>
     </div>
     <script src="/JAVASCRIPT/index.js"></script>
     <script src="/JAVASCRIPT/volume.js"></script>

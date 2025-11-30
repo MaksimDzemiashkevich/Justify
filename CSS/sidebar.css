@@ -43,7 +43,28 @@ a {
     width: 55px;
     height: 55px;
     border-radius: 6px;
+
+  
+   
+    
 }
+.playlist-cover_icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 6px;
+    filter: brightness(0) invert(1);
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    
+     & img{
+
+          height: 33px;
+          width:33px;
+    }
+
+}
+
 
 .playlist-info {
     display: flex;

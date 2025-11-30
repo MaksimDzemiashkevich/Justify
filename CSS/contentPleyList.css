@@ -105,3 +105,111 @@
     border-radius: 4px;
     border: 2px solid #202020;
 }
+
+/* Стили для модального окна */
+#new-playlist-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 340px; /* Подстройте под ваш sidebar */
+    transform: translateY(-50%);
+    z-index: 1000;
+    background: transparent; /* Убираем фон */
+}
+
+.modal-content {
+    background-color: #282828;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); /* Более выраженная тень вместо затемнения */
+    width: 350px;
+    max-width: 90%;
+    animation: modalAppear 0.3s ease-out;
+    border: 1px solid #404040;
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #404040;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.modal-content input::placeholder {
+    color: #888;
+}
+
+.modal-content input:focus {
+    outline: none;
+    border-color: #ff8c00;
+}
+
+.modal-content button{
+    width: 100%;
+    padding: 12px;
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.modal-content button:hover {
+    background-color: #ffa733;
+    transform: translateY(-1px);
+}
+
+#close-modal {
+    display: none; 
+}
+#new-playlist-modal.active {
+    display: block !important;
+}
+.playlist-cover_icon {
+    transition: all 0.3s ease; /* Плавность для всех изменений */
+}
+
+#new-playlist-btn.active .playlist-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+#new-playlist-btn.active .playlist-cover_icon {
+    transform: rotate(45deg);
+}
+
+#new-playlist-btn:hover .playlist-item {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+

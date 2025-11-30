@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/CSS/content.css">
     <link rel="stylesheet" href="/CSS/index.css">
     <link rel="stylesheet" href="/CSS/contentPleyList.css">
+    <link rel="stylesheet" href="/CSS/editPlaylistModal.css">
 </head>
 <body>
 
@@ -187,5 +188,34 @@
 <script src="/JAVASCRIPT/playTrack.js"></script>
 <script src="/JAVASCRIPT/router.js"></script>
 
+<!-- Модальное окно редактирования плейлиста -->
+<div id="edit-playlist-modal" class="modal">
+    <div class="modal-content">
+        <h2>Изменение сведений</h2>
+        
+        <form id="edit-playlist-form">
+            <div class="form-group">
+                <input type="text" id="edit-playlist-name" placeholder="Название плейлиста" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="file-upload">
+                    <input type="file" accept="image/*" style="display: none;">
+                    <div class="upload-area">
+                        <!-- Замени src на путь к твоей иконке -->
+                        <img src="/Image/folder.png" class="custom-upload-icon" alt="Загрузить">
+                        <span>Загрузить</span> <!-- Текст белый -->
+                    </div>
+                </label>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit">Сохранить</button>
+                <button type="button" id="close-edit-modal">Отмена</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="/JAVASCRIPT/editPlaylist.js"></script>
 </body>
 </html>
