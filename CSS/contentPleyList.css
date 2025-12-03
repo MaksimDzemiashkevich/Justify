@@ -39,7 +39,6 @@
     font-family: Arial, sans-serif;
     color: white;
     max-height: 600px;
-    /*overflow-y: auto;*/
     scrollbar-width: thin;
     scrollbar-color: orange #202020;
 }
@@ -91,9 +90,8 @@
     padding-right: 10px;
 }
 
-/* Стили для скроллбара (Chrome, Edge, Safari) */
 #trackList::-webkit-scrollbar {
-    width: 8px;
+    width: 300px;
 }
 
 #trackList::-webkit-scrollbar-track {
@@ -106,22 +104,21 @@
     border: 2px solid #202020;
 }
 
-/* Стили для модального окна */
 #new-playlist-modal {
     display: none;
     position: fixed;
     top: 50%;
-    left: 340px; /* Подстройте под ваш sidebar */
+    left: 340px;
     transform: translateY(-50%);
     z-index: 1000;
-    background: transparent; /* Убираем фон */
+    background: transparent;
 }
 
 .modal-content {
     background-color: #282828;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); /* Более выраженная тень вместо затемнения */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
     width: 350px;
     max-width: 90%;
     animation: modalAppear 0.3s ease-out;
@@ -194,7 +191,7 @@
     display: block !important;
 }
 .playlist-cover_icon {
-    transition: all 0.3s ease; /* Плавность для всех изменений */
+    transition: all 0.3s ease;
 }
 
 #new-playlist-btn.active .playlist-item {

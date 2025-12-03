@@ -53,7 +53,7 @@ a {
     height: 55px;
     border-radius: 6px;
     filter: brightness(0) invert(1);
-     display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     

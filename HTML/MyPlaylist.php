@@ -208,7 +208,7 @@
 <audio id="audioPlayer"></audio>
 
 
-<!-- Модальное окно создания плейлиста -->
+
 <div id="new-playlist-modal">
     <div class="modal-content">
         <h2>Создать новый плейлист</h2>
@@ -221,7 +221,6 @@
     </div>
 </div>
 
-<!-- Модальное окно редактирования плейлиста -->
 <div id="edit-playlist-modal" class="modal">
     <div class="modal-content">
         <h2>Изменение сведений</h2>
@@ -235,9 +234,8 @@
                 <label class="file-upload">
                     <input type="file" accept="image/*" style="display: none;">
                     <div class="upload-area">
-                        <!-- Замени src на путь к твоей иконке -->
                         <img src="/Image/folder.png" class="custom-upload-icon" alt="Загрузить">
-                        <span>Загрузить</span> <!-- Текст белый -->
+                        <span>Загрузить</span>
                     </div>
                 </label>
             </div>
