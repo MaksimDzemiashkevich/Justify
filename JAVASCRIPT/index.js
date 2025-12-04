@@ -39,3 +39,47 @@ function updateRangeBackground(rangeElem, colorFilled = '#FCB821', colorRemainin
         `linear-gradient(90deg, ${colorFilled} 0%, ${colorFilled} ${percent}%, ${colorRemaining} ${percent}%, ${colorRemaining} 100%)`;
 }
 
+// Открытие/закрытие сайдбара на мобильных
+const sidebar = document.getElementById('playLists');
+const sidebarToggle = document.querySelector('.playlist-mobile-toggle');
+const sidebarOverlay = document.querySelector('.sidebar-overlay');
+
+if (sidebarToggle) {
+    sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.add('mobile-open');
+        sidebarOverlay.classList.add('active');
+    });
+}
+
+if (sidebarOverlay) {
+    sidebarOverlay.addEventListener('click', () => {
+        sidebar.classList.remove('mobile-open');
+        sidebarOverlay.classList.remove('active');
+    });
+}
+
+// Закрытие сайдбара при клике на ссылку
+document.querySelectorAll('#playLists a').forEach(link => {
+    link.addEventListener('click', () => {
+        sidebar.classList.remove('mobile-open');
+        if (sidebarOverlay) sidebarOverlay.classList.remove('active');
+    });
+});
+
+// Открытие мобильных кнопок авторизации
+const authToggle = document.createElement('button');
+authToggle.className = 'auth-toggle-btn';
+authToggle.innerHTML = '👤';
+document.querySelector('#header').appendChild(authToggle);
+
+authToggle.addEventListener('click', () => {
+    document.querySelector('#authButtons').classList.toggle('mobile-visible');
+});
+
+// Закрытие мобильного меню при ресайзе
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        sidebar.classList.remove('mobile-open');
+        if (sidebarOverlay) sidebarOverlay.classList.remove('active');
+    }
+});

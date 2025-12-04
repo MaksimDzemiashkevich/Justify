@@ -96,3 +96,173 @@ button#loginBtn:hover{
 #accountBtn:hover {
     background: #FFC53D;
 }
+
+
+/* header.css */
+/* ... существующие стили ... */
+
+/* Медиа-запросы для адаптации header */
+
+/* Для планшетов (ширина до 1024px) */
+@media screen and (max-width: 1024px) {
+    #header {
+        gap: 30px;
+        padding: 0 15px;
+    }
+    
+    input#Search {
+        max-width: 350px;
+    }
+    
+    #authButtons {
+        gap: 10px;
+    }
+    
+    .auth-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Для мобильных устройств в горизонтальной ориентации (до 768px) */
+@media screen and (max-width: 768px) {
+    #header {
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    div#Home {
+        width: 40px;
+        height: 40px;
+    }
+    
+    #homik {
+        width: 35px;
+        height: 35px;
+    }
+    
+    input#Search {
+        max-width: 250px;
+        height: 35px;
+        font-size: 14px;
+        padding: 0 40px;
+    }
+    
+    #Searchbar #icon {
+        left: 30px;
+        width: 25px;
+        height: 25px;
+    }
+    
+    #authButtons {
+        gap: 8px;
+    }
+    
+    .auth-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    
+    #registerBtn .full-text {
+        display: none;
+    }
+    
+    #registerBtn::after {
+        content: "Рег.";
+    }
+}
+
+/* Для мобильных устройств (до 480px) */
+@media screen and (max-width: 480px) {
+    #header {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+        justify-content: space-between;
+    }
+    
+    #Home {
+        order: 1;
+    }
+    
+    #Searchbar {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    input#Search {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    #authButtons {
+        order: 2;
+        margin-left: 0;
+        gap: 5px;
+    }
+    
+    .auth-btn {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    
+    #registerBtn::after {
+        content: "Р";
+    }
+}
+
+/* Для очень маленьких экранов (до 360px) */
+@media screen and (max-width: 360px) {
+    #header {
+        gap: 8px;
+        padding: 8px;
+    }
+    
+    div#Home {
+        width: 35px;
+        height: 35px;
+    }
+    
+    #homik {
+        width: 30px;
+        height: 30px;
+    }
+    
+    input#Search {
+        height: 32px;
+        font-size: 13px;
+        padding: 0 35px;
+    }
+    
+    #Searchbar #icon {
+        left: 25px;
+        width: 22px;
+        height: 22px;
+    }
+    
+    .auth-btn {
+        padding: 4px 8px;
+        font-size: 11px;
+        border-radius: 15px;
+    }
+    
+    button#loginBtn {
+        padding: 4px 10px;
+    }
+}
+
+/* Для предотвращения масштабирования на очень маленьких устройствах */
+@media screen and (max-width: 320px) {
+    .auth-btn {
+        min-width: 60px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    
+    #loginBtn {
+        min-width: 65px;
+    }
+}

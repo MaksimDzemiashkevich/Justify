@@ -33,7 +33,11 @@
 
             <div id="authButtons">
                 <button class="auth-btn" id="loginBtn">Войти</button>
-                <button class="auth-btn" id="registerBtn">Зарегистрироваться</button>
+                <button class="auth-btn" id="registerBtn">
+                    <span class="full-text">Зарегистрироваться</span>
+                   
+                </button>
+
 
                 <button class="auth-btn" id="accountBtn" style="display: none;">Аккаунт</button>
             </div>
