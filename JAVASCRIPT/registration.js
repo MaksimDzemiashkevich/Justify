@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const passwordInput = document.querySelector('input[name="password"]');
     const confirmPasswordInput = document.querySelector('input[name="password_confirm"]');
     
-    // Список допустимых телефонных кодов
     const validPhoneCodes = [
         '+375', // Беларусь
         '+7',   // Россия, Казахстан
@@ -29,28 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
         '+64',  // Новая Зеландия
     ];
     
-    // Список допустимых доменов email
-    const validEmailDomains = [
-        '.com',
-        '.ru',
-        '.by',
-        '.net',
-        '.org',
-        '.info',
-        '.biz',
-        '.io',
-        '.ua',
-        '.kz',
-        '.org',
-        '.edu',
-        '.gov',
-        '.mil'
-    ];
+
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         
-        // Проверяем все поля и показываем первую ошибку
         const phoneError = validatePhone();
         if (phoneError) {
             alert(phoneError);
@@ -79,48 +61,24 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Если всё правильно, отправляем форму
         form.submit();
     });
     
-    // Валидация телефона
     function validatePhone() {
-        const phone = usernameInput.value.trim();
+        const UserName = usernameInput.value.trim();
         
-        if (phone === '') {
-            return 'Введите номер телефона';
+        if (UserName === '') {
+            return 'Введите логин';
         }
         
-        // Проверяем, начинается ли номер с допустимого кода
-        let hasValidCode = false;
-        for (const code of validPhoneCodes) {
-            if (phone.startsWith(code)) {
-                hasValidCode = true;
-                break;
-            }
+        if (UserName.length < 3){
+            return 'Логин не должен быть короче трех символов';
         }
+       
         
-        if (!hasValidCode) {
-            return 'Неверный код страны. Используйте +375, +7, +1 и т.д.';
-        }
-        
-        // Удаляем код и проверяем длину номера (9 цифр)
-        const code = phone.match(/^\+\d+/)[0];
-        const numberPart = phone.substring(code.length).replace(/\D/g, '');
-        
-        if (numberPart.length !== 9) {
-            return 'Номер должен содержать 9 цифр (без кода страны)';
-        }
-        
-        // Проверка на только цифры после кода
-        if (!/^\+\d+[\d\s\-()]+$/.test(phone)) {
-            return 'Номер может содержать только цифры, пробелы, скобки и дефисы';
-        }
-        
-        return null; // Ошибок нет
+        return null;
     }
     
-    // Валидация email
     function validateEmail() {
         const email = emailInput.value.trim();
         
@@ -128,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return 'Введите email';
         }
         
-        // Проверка наличия @
         if (!email.includes('@')) {
             return 'Email должен содержать символ @';
         }
@@ -141,12 +98,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const localPart = parts[0];
         const domainPart = parts[1];
         
-        // Проверка названия до @ (минимум 2 символа)
         if (localPart.length < 2) {
             return 'Название email должно быть не менее 2 символов';
         }
         
-        // Проверка домена
         let hasValidDomain = false;
         for (const domain of validEmailDomains) {
             if (domainPart.endsWith(domain)) {
@@ -156,13 +111,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (!hasValidDomain) {
-            return 'Используйте домены: .com, .ru, .by и т.д.';
+            return 'Используйте домены: .com, .ru';
         }
         
-        return null; // Ошибок нет
+        return null;
     }
     
-    // Валидация пароля
     function validatePassword() {
         const password = passwordInput.value;
         
@@ -170,20 +124,17 @@ document.addEventListener('DOMContentLoaded', function() {
             return 'Введите пароль';
         }
         
-        // Проверка длины пароля
         if (password.length < 7) {
             return 'Пароль должен быть не менее 7 символов';
         }
         
-        // Проверка на пробелы
         if (password.includes(' ')) {
             return 'Пароль не должен содержать пробелы';
         }
         
-        return null; // Ошибок нет
+        return null;
     }
     
-    // Валидация подтверждения пароля
     function validateConfirmPassword() {
         const password = passwordInput.value;
         const confirmPassword = confirmPasswordInput.value;
@@ -196,6 +147,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return 'Пароли не совпадают';
         }
         
-        return null; // Ошибок нет
+        return null;
     }
 });

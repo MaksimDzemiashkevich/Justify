@@ -6,7 +6,9 @@
     font-family: Arial, sans-serif;
     overflow-y: auto;
 }
-
+#playlist-icon{
+   display: none;
+}
 #playlist-header {
     font-size: 18px;
     font-weight: bold;
@@ -43,10 +45,6 @@ a {
     width: 55px;
     height: 55px;
     border-radius: 6px;
-
-  
-   
-    
 }
 .playlist-cover_icon {
     width: 55px;
@@ -73,7 +71,7 @@ a {
 
 .playlist-name {
     font-size: 15px;
-    font-weight: 600;
+  
 }
 
 .playlist-author {
@@ -100,3 +98,19 @@ a {
 }
 
 
+@media screen and (max-width: 600px) {
+ .playlist-info {
+    display: none;
+    
+
+}
+#playlist-icon{
+   display: block;
+}
+.playlist-item {
+    padding: 0px;
+}
+#playlist-header{
+    display: none;
+}
+}

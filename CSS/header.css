@@ -91,6 +91,7 @@ button#loginBtn:hover{
     background: #FCB821;
     border: none;
     color: black;
+    display: none;
 }
 
 #accountBtn:hover {
@@ -98,12 +99,7 @@ button#loginBtn:hover{
 }
 
 
-/* header.css */
-/* ... существующие стили ... */
 
-/* Медиа-запросы для адаптации header */
-
-/* Для планшетов (ширина до 1024px) */
 @media screen and (max-width: 1024px) {
     #header {
         gap: 30px;
@@ -124,14 +120,13 @@ button#loginBtn:hover{
     }
 }
 
-/* Для мобильных устройств в горизонтальной ориентации (до 768px) */
 @media screen and (max-width: 768px) {
     #header {
         gap: 20px;
         padding: 0 10px;
     }
     
-    div#Home {
+    /*div#Home {
         width: 40px;
         height: 40px;
     }
@@ -139,9 +134,9 @@ button#loginBtn:hover{
     #homik {
         width: 35px;
         height: 35px;
-    }
+    }*/
     
-    input#Search {
+    /*input#Search {
         max-width: 250px;
         height: 35px;
         font-size: 14px;
@@ -152,9 +147,9 @@ button#loginBtn:hover{
         left: 30px;
         width: 25px;
         height: 25px;
-    }
+    }*/
     
-    #authButtons {
+    /*#authButtons {
         gap: 8px;
     }
     
@@ -169,16 +164,15 @@ button#loginBtn:hover{
     
     #registerBtn::after {
         content: "Рег.";
-    }
+    }*/
 }
 
-/* Для мобильных устройств (до 480px) */
 @media screen and (max-width: 480px) {
     #header {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px;
+        /*gap: 10px;*/
+        padding: 10 0px;
         justify-content: space-between;
     }
     
@@ -187,14 +181,16 @@ button#loginBtn:hover{
     }
     
     #Searchbar {
-        order: 3;
+        order: 2;
         width: 100%;
-        margin-top: 10px;
+        
     }
-    
+
     input#Search {
         max-width: 100%;
         width: 100%;
+        padding: 0px;
+        width: 70px;
     }
     
     #authButtons {
@@ -208,12 +204,11 @@ button#loginBtn:hover{
         font-size: 12px;
     }
     
-    #registerBtn::after {
+    /*#registerBtn::after {
         content: "Р";
-    }
+    }*/
 }
 
-/* Для очень маленьких экранов (до 360px) */
 @media screen and (max-width: 360px) {
     #header {
         gap: 8px;
@@ -230,10 +225,11 @@ button#loginBtn:hover{
         height: 30px;
     }
     
-    input#Search {
+    input#Search::placeholder {
         height: 32px;
         font-size: 13px;
         padding: 0 35px;
+        content: none;
     }
     
     #Searchbar #icon {
@@ -253,7 +249,6 @@ button#loginBtn:hover{
     }
 }
 
-/* Для предотвращения масштабирования на очень маленьких устройствах */
 @media screen and (max-width: 320px) {
     .auth-btn {
         min-width: 60px;

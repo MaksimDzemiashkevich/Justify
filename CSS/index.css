@@ -18,7 +18,7 @@ body{
     grid-template-columns: 50px auto auto;
     align-items: center;
     padding: 0 20px;
-    gap: 50px;
+    /*gap: 50px;*/
 }
 
 #playLists{
@@ -39,3 +39,12 @@ body{
     background: #282828;
 }
 
+@media screen and (max-width: 600px) {
+#main{
+    
+    grid-template-columns: 90px 1fr;
+    
+}
+
+
+}

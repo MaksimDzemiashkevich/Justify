@@ -4,13 +4,14 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Вход в Spotify</title>
-	<link rel="stylesheet" href="/CSS/enter.css" />
+	<link rel="stylesheet" href="/CSS/enter.css"/>
 </head>
 <body>
 	<div class="container">
 	<h1>Войдите в свой аккаунт</h1>
-		<form action="/PHP/Registrate.php" method="POST">
+		<form action="/PHP/Registrate.php" method="POST" class="form_enter">
 			<input name="email" type="email" placeholder="Электронная почта" class="input email" required/>
+			<input name="password" type="password" placeholder="Пароль" class="input email" required/>
 			<button type="submit" class="next-btn">Продолжить</button>
 		</form>
 		<div class="divider"></div>

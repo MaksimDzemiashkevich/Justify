@@ -28,7 +28,7 @@
 
             <div id="Searchbar">
                 <img id="icon" src="Image/Lupa.png">
-                <input id="Search"  placeholder="Что хотите послушать?">
+                <input id="Search"  placeholder="Поиск">
             </div>
 
             <div id="authButtons">
@@ -45,7 +45,7 @@
         </header>
         <aside id="playLists">
             <div id="playlist-header">Мои плейлисты</div>
-
+            <img src="/Image/mute.png" id="playlist-icon">
             <div id="playlist-list">
                 <?php
                 $playlists = $user["playlists"] ?? [];;

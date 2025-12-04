@@ -65,21 +65,3 @@ document.querySelectorAll('#playLists a').forEach(link => {
         if (sidebarOverlay) sidebarOverlay.classList.remove('active');
     });
 });
-
-// Открытие мобильных кнопок авторизации
-const authToggle = document.createElement('button');
-authToggle.className = 'auth-toggle-btn';
-authToggle.innerHTML = '👤';
-document.querySelector('#header').appendChild(authToggle);
-
-authToggle.addEventListener('click', () => {
-    document.querySelector('#authButtons').classList.toggle('mobile-visible');
-});
-
-// Закрытие мобильного меню при ресайзе
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-        sidebar.classList.remove('mobile-open');
-        if (sidebarOverlay) sidebarOverlay.classList.remove('active');
-    }
-});
