@@ -44,9 +44,14 @@
 
         </header>
         <aside id="playLists">
+            
             <div id="playlist-header">Мои плейлисты</div>
-            <img src="/Image/mute.png" id="playlist-icon">
+           <div class="IconDiv"> 
+           <img src="/Image/playlist.png" id="playlist-icon">
+            </div>
+           
             <div id="playlist-list">
+                
                 <?php
                 $playlists = $user["playlists"] ?? [];;
                 foreach($playlists as $playlist): ?>
@@ -146,9 +151,9 @@
 
             <div id="player-center">
                 <div id="controls">
-                    <button class="player-btn" id="prevBtn">⏮</button>
-                    <button class="player-btn play" id="playBtn">▶</button>
-                    <button class="player-btn" id="nextBtn">⏭</button>
+                    <button class="player-btn" id="prevBtn" style="color: orange;">⏮</button>
+                    <button class="player-btn play" id="playBtn" style="color: orange;">▶</button>
+                    <button class="player-btn" id="nextBtn" style="color: orange;">⏭</button>
                 </div>
 
                 <div id="progress-block">
@@ -170,7 +175,7 @@
                 <h2>Создать новый плейлист</h2>
                 <form id="create-playlist-form" action="/PHP/createPlaylist.php" method="POST">
                     <input type="text" name="playlist_name" id="playlist-name" placeholder="Название плейлиста" required>
-                    <input type="url" name="playlist_cover" id="playlist-cover" placeholder="Ссылка на обложку (необязательно)">
+                    
                     <button type="submit">Создать</button>
                     <button type="button" id="close-modal">Отмена</button>
                 </form>

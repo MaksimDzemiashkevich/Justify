@@ -5,10 +5,15 @@
     padding: 20px;
     font-family: Arial, sans-serif;
     overflow-y: auto;
+    overflow-x: hidden;    /* Отключаем горизонтальный скролл */
+   
 }
 #playlist-icon{
    display: none;
+  
+   
 }
+
 #playlist-header {
     font-size: 18px;
     font-weight: bold;
@@ -98,17 +103,35 @@ a {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 832px) {
  .playlist-info {
     display: none;
     
+    
 
 }
+#playLists {
+    width: auto;
+    justify-content:center;
+    justify-items: center;
+   
+}
+a {
+    width: 60px;
+}
+
 #playlist-icon{
    display: block;
+   width: 33px;
+   margin-bottom: 15px;
+   filter: brightness(1.5);
+
+    
 }
 .playlist-item {
     padding: 0px;
+    
+
 }
 #playlist-header{
     display: none;

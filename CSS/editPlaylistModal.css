@@ -11,6 +11,7 @@
     align-items: center;
 }
 
+
 #edit-playlist-modal.active {
     display: flex;
 }
@@ -142,4 +143,18 @@
     background-color: #6a6a6a;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(83, 83, 83, 0.3);
+}
+@media screen and (max-width: 832px) {
+    #new-playlist-modal {
+       
+        top: 50%;
+        left: 110px;
+        
+}
+.modal-content {
+
+    width: 230px;
+    
+
+}
 }

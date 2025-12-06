@@ -39,7 +39,7 @@ body{
     background: #282828;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 832px) {
 #main{
     
     grid-template-columns: 90px 1fr;

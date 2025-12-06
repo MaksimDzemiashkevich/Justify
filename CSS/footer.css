@@ -12,6 +12,7 @@
     align-items: center;
     gap: 15px;
     width: 300px;
+    
 }
 
 
@@ -72,7 +73,7 @@
 #progress-block {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 70%;
     gap: 10px;
 }
 
@@ -145,6 +146,11 @@ input[type="range"]::-moz-range-track {
 
 @media screen and (max-width: 800px) {
 
+      #progress-block {
+    
+        width: 90%;
+    
+    }
     #player-center{
         width: 100%;
         padding: 0 30px;
@@ -157,11 +163,16 @@ input[type="range"]::-moz-range-track {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 832px) {
     #player-left{
         width: 60px;
     }
     #track-info{
         display: none;
    }
+   #progress-block {
+    margin: 0 0 0 20px;
+    width: 100%;
+    
+}
 }

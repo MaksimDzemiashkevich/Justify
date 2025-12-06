@@ -157,3 +157,46 @@
     background: #ffa733;
 }
 
+@media screen and (max-width: 832px) {
+
+    
+    .card{
+        width: 100px;
+    }
+    .card-cover {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.card-name {
+    font-size: 10px;
+   
+}
+.arrow {
+ 
+    width: 25px;
+    height: 25px;
+  
+}
+
+.arrow img {
+    width: 15px;
+    height: 15px;
+    
+}
+.arrow.left {
+    left: -5px;
+}
+
+.arrow.right {
+    right: -5px;
+    
+}
+.section-header h2 {
+    font-size: 16px;
+    margin: 0;
+}
+    
+}

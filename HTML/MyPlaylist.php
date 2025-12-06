@@ -28,7 +28,7 @@
 
         <div id="Searchbar">
             <img id="icon" src="/Image/Lupa.png">
-            <input id="Search" placeholder="Что хотите послушать?">
+            <input id="Search" placeholder="Поиск">
         </div>
 
         <div id="authButtons">
@@ -41,7 +41,9 @@
     </header>
     <aside id="playLists">
         <div id="playlist-header">Мои плейлисты</div>
-
+         <div class="IconDiv"> 
+           <img src="/Image/playlist.png" id="playlist-icon">
+        </div>
         <div id="playlist-list">
             <?php
                 $playlists = $user["playlists"] ?? [];;
@@ -77,7 +79,7 @@
             </a>
         </div>
     </aside>
-    <div id="content">
+    <div class="contentPlaylist">
         <div id="playlistHeader">
             <img src="/Image/defaultCover.png" alt="Rain Sounds Cover" class="cover">
             <div class="info">
@@ -92,86 +94,17 @@
                 <div class="track-title">Whispers of Rain</div>
                 <div class="track-artist">Echo Nature</div>
                 <div class="track-duration">3:12</div>
+                <img src="/Image/trash.png" class="track-trash">
             </div>
             <div class="track" data-src="/Music/Rendezvous.mp3">
                 <div class="track-number">2</div>
                 <div class="track-title">Forest Drizzle</div>
                 <div class="track-artist">Calm Elements</div>
                 <div class="track-duration">2:45</div>
+                <img src="/Image/trash.png" class="track-trash">
+                
             </div>
-            <div class="track">
-                <div class="track-number">3</div>
-                <div class="track-title">Window Rain</div>
-                <div class="track-artist">Soft Weather</div>
-                <div class="track-duration">2:58</div>
-            </div>
-            <div class="track">
-                <div class="track-number">4</div>
-                <div class="track-title">Midnight Showers</div>
-                <div class="track-artist">Dreamscape</div>
-                <div class="track-duration">3:20</div>
-            </div>
-            <div class="track">
-                <div class="track-number">5</div>
-                <div class="track-title">Rain on Leaves</div>
-                <div class="track-artist">Nature Pulse</div>
-                <div class="track-duration">2:40</div>
-            </div>
-            <div class="track">
-                <div class="track-number">6</div>
-                <div class="track-title">Ocean Rain</div>
-                <div class="track-artist">Blue Horizon</div>
-                <div class="track-duration">3:05</div>
-            </div>
-            <div class="track">
-                <div class="track-number">7</div>
-                <div class="track-title">Thunder & Calm</div>
-                <div class="track-artist">Storm Whisper</div>
-                <div class="track-duration">3:30</div>
-            </div>
-            <div class="track">
-                <div class="track-number">8</div>
-                <div class="track-title">Rainy Rooftop</div>
-                <div class="track-artist">Urban Nature</div>
-                <div class="track-duration">2:50</div>
-            </div>
-            <div class="track">
-                <div class="track-number">9</div>
-                <div class="track-title">Gentle Rainfall</div>
-                <div class="track-artist">Zen Drops</div>
-                <div class="track-duration">3:15</div>
-            </div>
-            <div class="track">
-                <div class="track-number">10</div>
-                <div class="track-title">Rain in the Valley</div>
-                <div class="track-artist">Mountain Echo</div>
-                <div class="track-duration">2:55</div>
-            </div>
-        
-            <div class="track">
-                <div class="track-number">11</div>
-                <div class="track-title">Rain in the Valley</div>
-                <div class="track-artist">Mountain Echo</div>
-                <div class="track-duration">2:55</div>
-            </div>
-            <div class="track">
-                <div class="track-number">12</div>
-                <div class="track-title">Rain in the Valley</div>
-                <div class="track-artist">Mountain Echo</div>
-                <div class="track-duration">2:55</div>
-            </div>
-            <div class="track">
-                <div class="track-number">13</div>
-                <div class="track-title">Rain in the Valley</div>
-                <div class="track-artist">Mountain Echo</div>
-                <div class="track-duration">2:55</div>
-            </div>
-            <div class="track">
-                <div class="track-number">14</div>
-                <div class="track-title">Rain in the Valley</div>
-                <div class="track-artist">Mountain Echo</div>
-                <div class="track-duration">2:55</div>
-            </div>
+           
         </div>
     </div>
 
@@ -186,9 +119,9 @@
 
         <div id="player-center">
             <div id="controls">
-                <button class="player-btn" id="prevBtn">⏮</button>
-                <button class="player-btn play" id="playBtn">▶</button>
-                <button class="player-btn" id="nextBtn">⏭</button>
+                <button class="player-btn" id="prevBtn" style="color: orange;">⏮</button>
+                <button class="player-btn play" id="playBtn" style="color: orange;">▶</button>
+                <button class="player-btn" id="nextBtn" style="color: orange;">⏭</button>
             </div>
 
             <div id="progress-block">
@@ -214,9 +147,9 @@
         <h2>Создать новый плейлист</h2>
         <form id="create-playlist-form" action="/PHP/createPlaylist.php" method="POST">
             <input type="text" name="playlist_name" id="playlist-name" placeholder="Название плейлиста" required>
-            <input type="url" name="playlist_cover" id="playlist-cover" placeholder="Ссылка на обложку (необязательно)">
+           
             <button type="submit">Создать</button>
-            <button type="button" id="close-modal">Отмена</button>
+            
         </form>
     </div>
 </div>
@@ -254,5 +187,6 @@
 <script src="/JAVASCRIPT/router.js"></script>
 <script src="/JAVASCRIPT/editPlaylist.js"></script>
 <script src="/JAVASCRIPT/NewPlaylist.js"></script>
+ <script src="/JAVASCRIPT/deletetrack.js"></script>
 </body>
 </html>
